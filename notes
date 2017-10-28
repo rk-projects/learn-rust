@@ -1,0 +1,23 @@
+Graydon Hoare
+Moz Research
+
+XPCOM == COM
+------
+Safe
+Highly Expressive
+HIgh Performance
+Manual Memory Management
+
+- trade offs
+compile time
+rely on expressive type system
+scope
+lifetime
+types --ownership,borrowing, mutability
+
+---acheivement
+
+----
+compiler construction in java - andrew appel
+------
+Nim -> Pascal
