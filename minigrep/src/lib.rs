@@ -25,10 +25,24 @@ pub fn run(config: Config)  -> Result<(), Box<Error>> {
     let mut f = File::open(config.filename)?;
 
     let mut contents = String::new();
-    f.read_to_string(& mut contents)?;
-
-    println!("With Text : \n {}", contents);
+    f.read_to_string(& mut contents)?    
+    for line in search(&config.query, &contents) {
+        println!("{}", line );
+    }
 
     Ok(())
     
+}
+
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    
+    let mut results = Vec::new();
+    for line in contents.lines() {
+        // do something with line
+        if line.contains(query) {
+            results.push(line);
+
+        }
+    }
+    results
 }
